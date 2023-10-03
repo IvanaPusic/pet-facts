@@ -1,7 +1,13 @@
+import { Footer, Form, Gallery, Hero, PetFacts } from './components';
+
 function App() {
   return (
     <>
-      <h1 className='text-3xl bold uppercase'>Pet facts</h1>
+      <Hero />
+      <PetFacts />
+      <Gallery />
+      <Form />
+      <Footer />
     </>
   );
 }
