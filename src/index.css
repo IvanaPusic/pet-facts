@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .hero-section {
+    @apply w-full h-[12.5rem] sm:h-[17.35rem] lg:h-[26.125rem]  bg-[url('./assets/hero-desktop.png')] bg-cover bg-center bg-no-repeat;
+  }
+}
