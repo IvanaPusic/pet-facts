@@ -8,6 +8,9 @@ export default {
         secondary: '#2b2b2b',
         dark: '#1d1d1d',
       },
+      fontFamily: {
+        'open-sans': ["'Open Sans'", 'sans-serif'],
+      },
     },
     fontSize: {
       '4xl': '3.625rem',
