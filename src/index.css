@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}
 @layer components {
   .hero-section {
     @apply w-full h-[12.5rem] sm:h-[17.35rem] lg:h-[26.125rem]  bg-[url('./assets/hero-desktop.png')] bg-cover bg-center bg-no-repeat;
+  }
+  .pet-facts-section {
+    @apply bg-primary pt-[3rem] pl-[0.94rem] pr-[1rem] lg:px-[10.31rem];
   }
 }
