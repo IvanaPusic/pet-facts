@@ -17,26 +17,14 @@ export const gallery = [
   },
   {
     id: 4,
-    img: img1,
+    img: img2,
   },
   {
     id: 5,
-    img: img2,
-  },
-  {
-    id: 6,
-    img: img3,
-  },
-  {
-    id: 7,
     img: img1,
   },
   {
-    id: 8,
-    img: img2,
-  },
-  {
-    id: 9,
+    id: 6,
     img: img3,
   },
 ];
