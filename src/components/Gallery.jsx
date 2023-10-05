@@ -22,7 +22,7 @@ const Gallery = () => {
                 <div>
                   <img
                     src={item.img}
-                    className='object-cover min-w-[21.5625rem] min-h-[12.3125rem] max-h-[27.1875rem] max-w-[45.625rem] rounded-lg'
+                    className='object-cover min-w-[21.5625rem] min-h-[12.3125rem] max-h-[27.1875rem] max-w-[45.625rem] rounded-lg '
                   />
                 </div>
               </SwiperSlide>
@@ -41,7 +41,10 @@ const Gallery = () => {
       <div className='grid grid-cols-2 pl-[2.5rem] md:hidden'>
         {mobileGallery.map((item) => {
           return (
-            <div key={item.id} className='mr-[1.94rem] my-[1.88rem]'>
+            <div
+              key={item.id}
+              className='mr-[1.94rem] my-[1.88rem] transition ease-in-out hover:scale-125'
+            >
               <img src={item.img} alt='mobile-image' />
             </div>
           );
@@ -50,7 +53,10 @@ const Gallery = () => {
       <div className='hidden md:grid md:grid-cols-4 gap-[1.88rem] px-[10.31rem]'>
         {desktopGallery.map((item) => {
           return (
-            <div key={item.id}>
+            <div
+              key={item.id}
+              className='transition ease-in-out hover:scale-125'
+            >
               <img src={item.img} alt='desktop-image' />
             </div>
           );

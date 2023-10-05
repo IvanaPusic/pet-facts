@@ -8,8 +8,8 @@ const PetFacts = () => {
         Daily pet facts - Love!
       </h1>
       <div className='pl-[0.94rem] pr-[1rem] '>
-        <article className='flex flex-col pb-[3.75rem] justify-center align-middle lg:mt-[6.44rem] lg:flex-row lg:justify-center lg:align-middle lg:gap-[1.88rem]'>
-          <div className='min-w-[21.5625rem] md:mx-auto min-h-[21.5625rem] lg:max-h-[21.5625rem] lg:max-w-[21.5625rem]  xl:max-w-[27.8125rem] xl:max-h-[27.8125rem]'>
+        <article className=' animate-from-left flex flex-col pb-[3.75rem] justify-center align-middle lg:mt-[6.44rem] lg:flex-row lg:justify-center lg:align-middle lg:gap-[1.88rem]'>
+          <div className=' lg:transition ease-in-out lg:hover:scale-125 min-w-[21.5625rem] md:mx-auto min-h-[21.5625rem] lg:max-h-[21.5625rem] lg:max-w-[21.5625rem]  xl:max-w-[27.8125rem] xl:max-h-[27.8125rem]'>
             <img src={cat} alt='cat' className='block' />
           </div>
           <div className=''>
@@ -28,8 +28,8 @@ const PetFacts = () => {
             </p>
           </div>
         </article>
-        <article className='flex flex-col justify-center align-middle lg:mt-[6.44rem] lg:flex-row-reverse lg:pb-[6.25rem] lg:justify-center lg:align-middle lg:gap-[1.88rem]'>
-          <div className='min-w-[21.5625rem] min-h-[21.5625rem] lg:max-h-[21.5625rem] lg:max-w-[21.5625rem] md:mx-auto xl:max-w-[27.8125rem] xl:max-h-[27.8125rem]'>
+        <article className='animate-from-right flex flex-col justify-center align-middle lg:mt-[6.44rem] lg:flex-row-reverse lg:pb-[6.25rem] lg:justify-center lg:align-middle lg:gap-[1.88rem]'>
+          <div className=' lg:transition ease-in-out lg:hover:scale-125 min-w-[21.5625rem] min-h-[21.5625rem] lg:max-h-[21.5625rem] lg:max-w-[21.5625rem] md:mx-auto xl:max-w-[27.8125rem] xl:max-h-[27.8125rem]'>
             <img src={dog} alt='dog' className='block' />
           </div>
           <div className=''>

@@ -11,6 +11,28 @@ export default {
       fontFamily: {
         'open-sans': ["'Open Sans'", 'sans-serif'],
       },
+      keyframes: {
+        fromLeft: {
+          '0%': {
+            transform: 'translateX(-1000px)',
+          },
+          '100%': {
+            transform: 'translateX(0px)',
+          },
+        },
+        fromRight: {
+          '0%': {
+            transform: 'translateX(1000px)',
+          },
+          '100%': {
+            transform: 'translateX(0px)',
+          },
+        },
+      },
+      animation: {
+        'from-left': 'fromLeft 3s ease',
+        'from-right': 'fromRight 3s ease ',
+      },
     },
     fontSize: {
       '4xl': '3.625rem',
