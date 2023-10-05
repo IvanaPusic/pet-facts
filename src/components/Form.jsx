@@ -1,86 +1,57 @@
-const Form = ({
-  values,
-  handleBlur,
-  handleChange,
-  handleSubmit,
-  errors,
-  touched,
-  isSubmitting,
-}) => {
-  console.log(errors.name);
-  return (
-    <section className='flex flex-col justify-center align-center bg-primary'>
-      <form onSubmit={handleSubmit}>
-        <label className='relative block'>
-          <input
-            className=' peer placeholder:text-open-sans placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-secondary focus:ring-secondary focus:ring-1 sm:text-sm'
-            placeholder='Name'
-            type='text'
-            name='name'
-            value={values.name}
-            onChange={handleChange}
-            onBlur={handleBlur}
-          />
-          <p
-            className={
-              errors.name && touched.name
-                ? 'peer-invalid:visible text-pink-600 text-sm'
-                : 'invisible '
-            }
-          >
-            {errors.name}
-          </p>
-        </label>
-        <label className='relative block'>
-          <input
-            className=' peer placeholder:text-open-sans placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-secondary focus:ring-secondary focus:ring-1 sm:text-sm'
-            placeholder='Email'
-            type='email'
-            name='email'
-            value={values.email}
-            onChange={handleChange}
-            onBlur={handleBlur}
-          />
-          <p
-            className={
-              errors.email && touched.email
-                ? 'peer-invalid:visible text-pink-600 text-sm'
-                : 'invisible '
-            }
-          >
-            {errors.email}
-          </p>
-        </label>
-        <label
-          htmlFor='countries'
-          className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'
-        >
-          <select
-            id='animals'
-            className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-            onChange={handleChange}
-            onBlur={handleBlur}
-            required
-          >
-            <option value={values.animals[0]}>Mačka</option>
-            <option value={values.animals[1]}>Pas</option>
-            <option value={values.animals[2]}>Hrčak</option>
-          </select>
-          {errors.animals && (
-            <p className='text-pink-600 text-sm'>{errors.animals}</p>
-          )}
-        </label>
+import { Form, Formik } from 'formik';
+import { schema } from '../schemas';
+import CustomEmail from './CustomEmail';
+import CustomInput from './CustomInput';
+import CustomSelect from './CustomSelect';
 
-        <button
-          type='submit'
-          disabled={isSubmitting}
-          className='disabled px-10 py-3 text-white font-bold bg-secondary rounded-md'
-        >
-          Submit
-        </button>
-      </form>
+const onSubmit = async (values, actions) => {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  actions.resetForm();
+};
+
+const FormComponent = () => {
+  return (
+    <section className='form-section'>
+      <h3 className='text-secondary text-xl text-center pb-[2rem] '>
+        Choose your pet!
+      </h3>
+      <Formik
+        initialValues={{ name: '', email: '', animals: '' }}
+        validationSchema={schema}
+        onSubmit={onSubmit}
+      >
+        {({ isSubmitting }) => (
+          <Form className='flex flex-col gap-[1.25rem] mx-auto'>
+            <CustomInput
+              label='name'
+              name='name'
+              type='text'
+              placeholder='Enter your username'
+            />
+            <CustomEmail
+              label='email'
+              name='email'
+              type='email'
+              placeholder='Enter your email'
+            />
+            <CustomSelect name='animals' placeholder='Please select an animal'>
+              <option value=''>Please select an animal</option>
+              <option value='mačka'>Mačka</option>
+              <option value='pas'>Pas</option>
+              <option value='hrčak'>Hrčak</option>
+            </CustomSelect>
+            <button
+              disabled={isSubmitting}
+              type='submit'
+              className='btn-secondary max-w-[7rem]'
+            >
+              Submit
+            </button>
+          </Form>
+        )}
+      </Formik>
     </section>
   );
 };
 
-export default Form;
+export default FormComponent;

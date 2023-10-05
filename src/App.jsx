@@ -1,46 +1,16 @@
-import { useFormik } from 'formik';
 import { useCookies } from 'react-cookie';
-import { Cookie, Footer, Form, Gallery, Hero, PetFacts } from './components';
-import { schema } from './schemas';
+import {
+  Cookie,
+  Footer,
+  FormComponent,
+  Gallery,
+  Hero,
+  PetFacts,
+} from './components';
 function App() {
   // const [isOpen, setIsOpen] = useState(false);
   const [cookies] = useCookies(['cookieConsent']);
 
-  const onSubmit = async (values, actions) => {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    actions.resetForm();
-    // console.log('submitted');
-    // setIsOpen(true);
-  };
-
-  const {
-    values,
-    handleChange,
-    isSubmitting,
-    handleBlur,
-    handleSubmit,
-    errors,
-    touched,
-  } = useFormik({
-    initialValues: {
-      name: '',
-      email: '',
-      animals: '',
-    },
-    validationSchema: schema,
-    onSubmit,
-  });
-
-  const formikHelpers = {
-    values,
-    handleChange,
-    handleBlur,
-    handleSubmit,
-    errors,
-    touched,
-    isSubmitting,
-    onSubmit,
-  };
   return (
     <section className='overflow:hidden'>
       {/* {isOpen && (
@@ -51,7 +21,7 @@ function App() {
       <Hero />
       <PetFacts />
       <Gallery />
-      <Form {...formikHelpers} />
+      <FormComponent />
       <Footer />
       {!cookies.cookieConsent && <Cookie />}
     </section>

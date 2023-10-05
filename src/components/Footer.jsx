@@ -1,57 +1,48 @@
 const Footer = () => {
   return (
-    <footer className='bg-dark px-[0.94rem] flex flex-col justify-center align-middle md:px-[10.31rem] pb-[5rem] '>
-      <div
-        className='pt-[2.25rem] grid grid-cols-1 justify-center align-center md:grid-cols-3 gap-[1.88rem] md:pt-[5rem] pb-[5.94rem] 
-      '
-      >
-        <div className='text-white  flex flex-col justify-center align-center text-center'>
-          <h5 className='text-white text-[1.10894rem] uppercase font-bold leading-[2.21788rem] tracking-[0.00494rem] pb-[1.5rem]'>
-            pet-facts.com
-          </h5>
+    <footer className='footer '>
+      <div className='footer-wrapper'>
+        <div className='flex flex-col justify-center align-center text-center'>
+          <h5 className='footer-heading'>pet-facts.com</h5>
           <ul>
-            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem] transition ease-in-out hover:translate-x-1'>
+            <li className='link'>
               <a href='#'>About us</a>
             </li>
-            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem] transition ease-in-out hover:translate-x-1'>
+            <li className='link'>
               <a href='#'>careers</a>
             </li>
-            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem] transition ease-in-out hover:translate-x-1'>
+            <li className='link'>
               <a href='#'>faq</a>
             </li>
           </ul>
         </div>
         <div className='flex flex-col justify-center align-center text-center'>
-          <h5 className='text-white text-[1.10894rem] uppercase font-bold leading-[2.21788rem] tracking-[0.00494rem] pb-[1.5rem]'>
-            our brands
-          </h5>
+          <h5 className='footer-heading'>our brands</h5>
           <ul>
-            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem] transition ease-in-out hover:translate-x-1'>
+            <li className='link'>
               <a href='#'>super coat</a>
             </li>
-            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem] transition ease-in-out hover:translate-x-1'>
+            <li className='link'>
               <a href='#'>fancy feast</a>
             </li>
-            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem] transition ease-in-out hover:translate-x-1'>
+            <li className='link'>
               <a href='#'>pro plan</a>
             </li>
-            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem] transition ease-in-out hover:translate-x-1'>
+            <li className='link'>
               <a href='#'>beyond</a>
             </li>
           </ul>
         </div>
         <div className='flex flex-col justify-center align-center text-center'>
-          <h5 className='text-white text-[1.10894rem] uppercase font-bold leading-[2.21788rem] tracking-[0.00494rem] pb-[1.5rem]'>
-            contact us
-          </h5>
+          <h5 className='footer-heading'>contact us</h5>
           <ul>
-            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem] transition ease-in-out hover:translate-x-1'>
+            <li className='link'>
               <a href='#'>contact us</a>
             </li>
-            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem] transition ease-in-out hover:translate-x-1'>
+            <li className='link'>
               <a href='#'>terms & conditions</a>
             </li>
-            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem] transition ease-in-out hover:translate-x-1'>
+            <li className='link'>
               <a href='#'>privacy policy</a>
             </li>
           </ul>

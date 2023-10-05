@@ -17,10 +17,7 @@ const Cookie = () => {
           </a>
         </span>
       </h4>
-      <button
-        className='py-2 px-5 bg-secondary text-white transition ease-in-out hover:translate-x-1 hover:bg-transparent border hover:text-secondary hover:border-secondary rounded-md'
-        onClick={giveCookieConsent}
-      >
+      <button className='btn-secondary' onClick={giveCookieConsent}>
         Accept
       </button>
     </div>
