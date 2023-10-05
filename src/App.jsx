@@ -1,16 +1,16 @@
 import { useFormik } from 'formik';
-import { useState } from 'react';
-import { Footer, Form, Gallery, Hero, PetFacts } from './components';
+import { useCookies } from 'react-cookie';
+import { Cookie, Footer, Form, Gallery, Hero, PetFacts } from './components';
 import { schema } from './schemas';
-
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
+  const [cookies] = useCookies(['cookieConsent']);
 
   const onSubmit = async (values, actions) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     actions.resetForm();
-    console.log('submitted');
-    setIsOpen(true);
+    // console.log('submitted');
+    // setIsOpen(true);
   };
 
   const {
@@ -42,18 +42,19 @@ function App() {
     onSubmit,
   };
   return (
-    <>
-      {isOpen && (
+    <section className='overflow:hidden'>
+      {/* {isOpen && (
         <div className='fixed top-0 left-0 h-screen w-full bg-white z-10'>
           modal
         </div>
-      )}
+      )} */}
       <Hero />
       <PetFacts />
       <Gallery />
       <Form {...formikHelpers} />
       <Footer />
-    </>
+      {!cookies.cookieConsent && <Cookie />}
+    </section>
   );
 }
 
