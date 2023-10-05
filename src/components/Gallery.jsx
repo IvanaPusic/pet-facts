@@ -22,13 +22,13 @@ const Gallery = () => {
                 <div>
                   <img
                     src={item.img}
-                    className='block min-w-[21.5625rem] min-h-[12.3125rem] max-h-[27.1875rem] max-w-[45.625rem] rounded-lg'
+                    className='object-cover min-w-[21.5625rem] min-h-[12.3125rem] max-h-[27.1875rem] max-w-[45.625rem] rounded-lg'
                   />
                 </div>
               </SwiperSlide>
             );
           })}
-          <div className='flex justify-center align-middle gap-[9.4rem] pt-[2.69rem]'>
+          <div className='flex justify-center align-middle gap-[9.4rem] pt-[2.69rem] pb-[4.62rem] lg:pb-[6.69rem] lg:pt-[4.62rem]'>
             <SwiperButtonPrev>
               <img src={arrowLeft} alt='' />
             </SwiperButtonPrev>
