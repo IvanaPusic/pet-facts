@@ -28,10 +28,19 @@ export default {
             transform: 'translateX(0px)',
           },
         },
+        fromBottom: {
+          '0%': {
+            transform: 'translateY(1000px)',
+          },
+          '100%': {
+            transform: 'translateY(0px)',
+          },
+        },
       },
       animation: {
         'from-left': 'fromLeft 3s ease',
         'from-right': 'fromRight 3s ease ',
+        'from-bottom': 'fromBottom 2.5s ease',
       },
     },
     fontSize: {
