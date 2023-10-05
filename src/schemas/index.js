@@ -8,6 +8,6 @@ export const schema = yup.object().shape({
   name: yup.string().min(3).required('Required name'),
   animals: yup
     .string()
-    .oneOf(['Mačka, Pas, Hrčak'])
+    .oneOf(['mačka', 'pas', 'hrčak'], 'Invalid Job Type')
     .required('Required option'),
 });
