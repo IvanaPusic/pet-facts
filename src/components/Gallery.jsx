@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import arrowLeft from '../assets/arrow-left.svg';
 import arrowRight from '../assets/arrow-right.svg';
-import { gallery } from '../data';
+import { desktopGallery, gallery, mobileGallery } from '../data';
 import SwiperButtonNext from './SwiperButtonNext';
 import SwiperButtonPrev from './SwiperButtonPrev';
 
@@ -37,6 +37,24 @@ const Gallery = () => {
             </SwiperButtonNext>
           </div>
         </Swiper>
+      </div>
+      <div className='grid grid-cols-2 pl-[2.5rem] md:hidden'>
+        {mobileGallery.map((item) => {
+          return (
+            <div key={item.id} className='mr-[1.94rem] my-[1.88rem]'>
+              <img src={item.img} alt='mobile-image' />
+            </div>
+          );
+        })}
+      </div>
+      <div className='hidden md:grid md:grid-cols-4 gap-[1.88rem] px-[10.31rem]'>
+        {desktopGallery.map((item) => {
+          return (
+            <div key={item.id}>
+              <img src={item.img} alt='desktop-image' />
+            </div>
+          );
+        })}
       </div>
     </section>
   );
