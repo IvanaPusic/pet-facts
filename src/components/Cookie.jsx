@@ -1,10 +1,10 @@
 import { useCookies } from 'react-cookie';
 
 const Cookie = () => {
-  const [setCookies] = useCookies(['cookieConsent']);
+  const [cookies, setCookie] = useCookies(['cookieConsent']);
 
   const giveCookieConsent = () => {
-    setCookies('cookieConsent', true, { path: '/' });
+    setCookie('cookieConsent', true, { path: '/' });
   };
   return (
     <div className=' animate-from-bottom fixed bg-[#e8e6e0] bottom-0 right-0 h-[12rem] w-full z-10 p-[1rem] lg:px-[10.31rem] '>
