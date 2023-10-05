@@ -10,13 +10,13 @@ const Footer = () => {
             pet-facts.com
           </h5>
           <ul>
-            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem]'>
+            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem] transition ease-in-out hover:translate-x-1'>
               <a href='#'>About us</a>
             </li>
-            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem]'>
+            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem] transition ease-in-out hover:translate-x-1'>
               <a href='#'>careers</a>
             </li>
-            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem]'>
+            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem] transition ease-in-out hover:translate-x-1'>
               <a href='#'>faq</a>
             </li>
           </ul>
@@ -26,16 +26,16 @@ const Footer = () => {
             our brands
           </h5>
           <ul>
-            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem]'>
+            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem] transition ease-in-out hover:translate-x-1'>
               <a href='#'>super coat</a>
             </li>
-            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem]'>
+            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem] transition ease-in-out hover:translate-x-1'>
               <a href='#'>fancy feast</a>
             </li>
-            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem]'>
+            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem] transition ease-in-out hover:translate-x-1'>
               <a href='#'>pro plan</a>
             </li>
-            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem]'>
+            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem] transition ease-in-out hover:translate-x-1'>
               <a href='#'>beyond</a>
             </li>
           </ul>
@@ -45,13 +45,13 @@ const Footer = () => {
             contact us
           </h5>
           <ul>
-            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem]'>
+            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem] transition ease-in-out hover:translate-x-1'>
               <a href='#'>contact us</a>
             </li>
-            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem]'>
+            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem] transition ease-in-out hover:translate-x-1'>
               <a href='#'>terms & conditions</a>
             </li>
-            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem]'>
+            <li className='text-white text-[1.10894rem]  leading-[2.21788rem] tracking-[0.00494rem] transition ease-in-out hover:translate-x-1'>
               <a href='#'>privacy policy</a>
             </li>
           </ul>
