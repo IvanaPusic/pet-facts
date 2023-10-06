@@ -1,10 +1,15 @@
+import { GoogleLogin } from '@react-oauth/google';
 import { Form, Formik } from 'formik';
+import jwt_decode from 'jwt-decode';
+import { useState } from 'react';
 import { schema } from '../schemas';
 import CustomEmail from './CustomEmail';
 import CustomInput from './CustomInput';
 import CustomSelect from './CustomSelect';
 
 const FormComponent = ({ openModal }) => {
+  const [user, setUser] = useState({});
+
   const onSubmit = async (values, actions) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     actions.resetForm();
@@ -47,8 +52,20 @@ const FormComponent = ({ openModal }) => {
             >
               Submit
             </button>
+            <GoogleLogin
+              onSuccess={(credentialResponse) => {
+                const decoded = jwt_decode(credentialResponse.credential);
+                setUser(decoded);
+              }}
+              onError={() => {
+                console.log('Login Failed');
+              }}
+            />
           </Form>
         )}
+        <h3 className='bg-secondary text-white rounded-md text-center w-[50%]'>
+          Authenticated as: {user.email}
+        </h3>
       </Formik>
     </section>
   );
