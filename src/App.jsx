@@ -1,4 +1,4 @@
-import { useCookies } from 'react-cookie';
+import { useEffect, useState } from 'react';
 import {
   Cookie,
   Footer,
@@ -8,17 +8,30 @@ import {
   PetFacts,
 } from './components';
 function App() {
-  const [cookies] = useCookies(['cookieConsent']);
+  const [cookie, setCookie] = useState(true);
+
+  useEffect(() => {
+    if (JSON.parse(localStorage.getItem('cookie'))) {
+      setCookie(false);
+    }
+  }, [cookie]);
+
+  console.log(localStorage);
+  const handleCookie = () => {
+    localStorage.setItem('cookie', JSON.stringify(cookie));
+    setCookie(false);
+    console.log(localStorage);
+  };
 
   return (
-    <section className='overflow:hidden'>
+    <>
       <Hero />
       <PetFacts />
       <Gallery />
       <FormComponent />
       <Footer />
-      {!cookies.cookieConsent && <Cookie />}
-    </section>
+      {cookie && <Cookie handleCookie={handleCookie} />}
+    </>
   );
 }
 
