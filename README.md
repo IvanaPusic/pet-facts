@@ -1,8 +1,5 @@
-# React + Vite
+# Pet facts app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project description
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The Pet Facts App is a user-friendly mobile application designed to provide users with interesting and informative facts about cats and dogs. This app also includes a gallery where users can browse through pet photos and a validation form for user-submitted content.
