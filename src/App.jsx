@@ -8,6 +8,7 @@ import {
   Modal,
   PetFacts,
 } from './components';
+
 function App() {
   const [cookie, setCookie] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);

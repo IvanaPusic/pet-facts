@@ -15,6 +15,7 @@ const FormComponent = ({ openModal }) => {
     actions.resetForm();
     openModal();
   };
+
   return (
     <section className='form-section'>
       <h3 className='text-secondary text-xl text-center pb-[2rem] '>
@@ -63,10 +64,16 @@ const FormComponent = ({ openModal }) => {
             />
           </Form>
         )}
-        <h3 className='bg-secondary text-white rounded-md text-center w-[50%]'>
+      </Formik>
+      {Object.entries(user).length === 0 ? (
+        <h3 className='bg-transparent border border-secondary text-secondary py-3 text-center rounded-md mt-4'>
+          No avaliable user
+        </h3>
+      ) : (
+        <h3 className='bg-secondary text-white py-3 text-center rounded-md mt-4'>
           Authenticated as: {user.email}
         </h3>
-      </Formik>
+      )}
     </section>
   );
 };
