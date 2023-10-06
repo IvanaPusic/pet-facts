@@ -4,12 +4,12 @@ import CustomEmail from './CustomEmail';
 import CustomInput from './CustomInput';
 import CustomSelect from './CustomSelect';
 
-const onSubmit = async (values, actions) => {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  actions.resetForm();
-};
-
-const FormComponent = () => {
+const FormComponent = ({ openModal }) => {
+  const onSubmit = async (values, actions) => {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    actions.resetForm();
+    openModal();
+  };
   return (
     <section className='form-section'>
       <h3 className='text-secondary text-xl text-center pb-[2rem] '>
